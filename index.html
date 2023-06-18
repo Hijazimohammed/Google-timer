@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Timer Clone</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="tabs">
+      <div class="tab-header">
+        <div class="tab active" onclick="changeTab(0)">TIMER</div>
+        <div class="tab" onclick="changeTab(1)">STOPWATCH</div>
+      </div>
+      <div class="tab-content">
+        <div id="tab1" class="tab-pane show">
+          <div class="timer">
+            <div class="timer-input">
+              <sub>h</sub
+              ><input
+                type="number"
+                id="hours-input"
+                min="0"
+                max="99"
+                placeholder="00"
+                maxlength="2"
+                class="inputs"
+              />
+              <sub>m</sub>
+              <input
+                type="number"
+                id="minutes-input"
+                min="0"
+                max="59"
+                placeholder="00"
+                maxlength="2"
+                class="inputs"
+              />
+              <sub>s</sub>
+              <input
+                type="number"
+                id="seconds-input"
+                min="0"
+                max="59"
+                placeholder="00"
+                maxlength="2"
+                class="inputs"
+              />
+            </div>
+
+            <div class="timer-buttons">
+              <div>
+                <button
+                  onclick="mute()"
+                  id="sound-mute"
+                  style="width: 50px; height: 50px; padding: 10px"
+                >
+                  <img
+                    width="20"
+                    height="20"
+                    srcset="
+                      https://img.icons8.com/?size=2x&amp;id=41562&amp;format=png 2x,
+                      https://img.icons8.com/?size=1x&amp;id=41562&amp;format=png 1x
+                    "
+                    src="https://img.icons8.com/?size=2x&amp;id=41562&amp;format=png 2x"
+                    alt="Sound icon"
+                  />
+                </button>
+              </div>
+              <div class="btns">
+                <button id="start-btn" onclick="startTimer()">Start</button>
+                <button id="stop-btn" onclick="stopTimer()">Stop</button>
+                <button id="reset-btn" onclick="resetTimer()">Reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tab2" class="tab-pane">
+          <div class="stop-watch">
+            <div class="stop-watch-display">
+              <sub>h</sub> <span id="hours">00</span>: <sub>m</sub
+              ><span id="minutes">00</span>: <sub>s</sub
+              ><span id="seconds">00</span>
+            </div>
+            <div class="stop-watch-buttons">
+              <button id="start-watch-btn" onclick="startWatchTimer()">
+                Start
+              </button>
+              <button id="stop-watch-btn" onclick="stopWatchTimer()">
+                Stop
+              </button>
+              <button id="rese-watch-btn" onclick="resetWatchTimer()">
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <audio id="audio" src="./sound/digital-alarm-2-151919.mp3"></audio>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

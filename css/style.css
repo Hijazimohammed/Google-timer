@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* tabs style */
+
+.tabs {
+  margin: 50px auto;
+  width: 50%;
+  border: 1px solid #eee;
+}
+
+.tab-header {
+  display: flex;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tab:hover {
+  background-color: #e0e0e0;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.show {
+  display: block;
+}
+
+/* timer */
+
+.timer {
+  text-align: center;
+  padding: 50px;
+  width: 100%;
+}
+
+.timer-input {
+  width: 100%;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-input input {
+  border: none;
+  outline: none;
+  font-size: 48px;
+  padding: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.timer-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.timer-buttons .btns button {
+  margin-right: 10px;
+}
+.timer-buttons .btns button:hover {
+  background-color: #686767;
+  color: #fff;
+}
+button {
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+#start-btn:focus {
+  border: 1px solid gold;
+}
+sub {
+  font-size: 2rem;
+}
+
+/* stopWatch */
+
+.stop-watch {
+  text-align: center;
+  padding: 50px;
+}
+
+.stop-watch-display {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.stop-watch-buttons button {
+  margin-right: 10px;
+}
